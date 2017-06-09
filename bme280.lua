@@ -1,4 +1,4 @@
-sda = 3
+sda = 3 -- wireing BME-280
 scl = 4
 Broker="iot.eclipse.org"
 port=1883
