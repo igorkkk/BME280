@@ -1,1 +1,3 @@
-BME280
+# BME280 data to MQTT Brocker.
+
+Simple Lua script.
