@@ -78,7 +78,7 @@ if wireisgood == 2 then
     connectNow()
     run_main_prog()
 else
-    print("\n\n\===========\t\t   Error at Wireing or not BME, Balbes!   ===========")
+    print("\n\n===========\t\t   Error at Wireing or not BME, Balbes!   ===========")
 end
    
 --end
