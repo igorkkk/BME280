@@ -4,12 +4,12 @@ Broker="iot.eclipse.org"
 port=1883
 
 local wireisgood
-wireisgood = bme280.init(sda, scl)
+wireisgood = bme280.init(sda, scl) -- return 2 at BME, 1 - BMP, else nil
 
-m = mqtt.Client( "bme280200", 120, "bme280", "superpass")
-pu = false
+m = mqtt.Client( "bme280280", 120, "bme280", "superpass")
+pu = false -- is wifi and broker connected
 
-m:lwt("/myhome/bme280/lwt", "bme280", 0, 0)
+m:lwt("/myhome/lwt", "bme280", 0, 0)
 
 connectNow = function()
     local tm = tmr.create()
@@ -78,7 +78,7 @@ if wireisgood == 2 then
     connectNow()
     run_main_prog()
 else
-    print("\n\n\===========\t\t   Error at Wireing or not BME, Balbes!   ===========")
+    print("\n\n===========\t\t   Error at Wireing or not BME, Balbes!   ===========")
 end
    
 --end
