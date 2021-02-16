@@ -1,7 +1,7 @@
 sda = 3 -- wireing BME-280
 scl = 4
-Broker="iot.eclipse.org"
-port=1883
+Broker = "mqtt.eclipse.org"
+port = 1883
 
 local wireisgood
 wireisgood = bme280.init(sda, scl) -- return 2 at BME, 1 - BMP, else nil
